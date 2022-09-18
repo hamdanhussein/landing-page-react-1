@@ -1,23 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import Footer from './components/Footer/Footer'
+import Contacts from './components/Contact/Contacts'
+import Service from './components/Section/Service/Service';
+import Feature from  './components/Section/Feature/Feature';
+import Intro from './components/Hero/Intro';
+import Navbar from './components/Nav/Navbar';
+import GlobalStyle from './components/Styles/Global.styled';
+import { SectionContainer } from './components/Styles/SectionContainer.styled';
+import { ServiceShape, FeatureShape, IntroShape, PriceShape } from './components/Styles/Shape.styled';
+import Price from './components/Section/Price/Price';
 
 function App() {
+ 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <GlobalStyle />
+      <SectionContainer>
+        <Navbar />
+        <Intro />
+        <IntroShape/>
+      </SectionContainer>
+      <SectionContainer>
+        <Feature />
+        <FeatureShape/>
+      </SectionContainer>
+      <SectionContainer>
+        <Service/>
+        <ServiceShape/>
+      </SectionContainer>
+      <SectionContainer>
+        <Price/>
+        <PriceShape/>
+      </SectionContainer>
+      <SectionContainer>
+        <Contacts/>
+      </SectionContainer>
+      
+        <Footer/>
+    
     </div>
   );
 }
