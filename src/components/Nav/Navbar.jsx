@@ -8,11 +8,12 @@ import {
   MenuItem,
   Button
 } from '../Styles/NavBar.styled';
+import {motion} from 'framer-motion'
 
 const Navbar = () => {
   return (
     <Container>
-      <Wrapper>
+      <Wrapper as={motion.div} initial={{y: -250}} animate={{y:-10}} transition={{delay: 1.2}}>
         <Left>
         <Logo>Agency</Logo>
         <Menu>

@@ -11,15 +11,6 @@ export const Container= styled.div`
   display:flex;
   flex-direction:column;
   align-items:center;
-
-
-  -webkit-transition: transform 0.3s 0s ease-in;
-  -moz-transition: transform 0.3s 0s ease-in;
-  -o-transition: transform 0.3s 0s ease-in;
-  transition: transform 0.3s 0s ease-in;
-
-  :hover {
-    transform:scale(1.1);
   
   }
 `

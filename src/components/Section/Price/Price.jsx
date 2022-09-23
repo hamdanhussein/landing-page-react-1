@@ -1,7 +1,7 @@
 import React from 'react';
 import PriceCard from './PriceCard';
 import { Container } from '../../Styles/Price.styled';
-
+import {motion} from 'framer-motion'
 const priceCard = [ {
     price: '10',
     type: 'Basic Plan',
@@ -31,7 +31,11 @@ const priceCard = [ {
 const Price = () => {
   
   return (
-    <Container>
+    <Container as={motion.div}  initial={'hidden'}
+    whileInView={'show'}
+    viewport={{ once: true, amount: 0.1 }}
+    transition={{ staggerChildren: 0.5 }}
+    >
     {priceCard.map((card, i)=> (
           <PriceCard key={i} card={card}/>
     ))}

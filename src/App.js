@@ -9,6 +9,7 @@ import { SectionContainer } from './components/Styles/SectionContainer.styled';
 import { ServiceShape, FeatureShape, IntroShape, PriceShape } from './components/Styles/Shape.styled';
 import Price from './components/Section/Price/Price';
 
+
 function App() {
  
   return (

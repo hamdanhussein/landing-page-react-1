@@ -19,8 +19,14 @@ import {
   MdPlayCircleOutline,
   Md3DRotation,
   MdDeveloperMode,
-  MdAddchart
+  MdAddchart,
 } from 'react-icons/md';
+import { motion } from 'framer-motion';
+import {
+  imageSlideAnimate,
+  titleAnimation,
+  subtitleAnimation,
+} from '../../Animation/Animation';
 
 const services = [
   {
@@ -40,9 +46,20 @@ const services = [
 const Service = () => {
   const [open, setOpen] = useState(false);
   return (
-    <Container>
+    <Container
+      as={motion.div}
+      initial={'hidden'}
+      whileInView={'show'}
+      viewport={{ once: true, amount: 0.1 }}
+      transition={{ staggerChildren: 0.5 }}
+    >
       <Left>
-        <Image open={open} src={Start} />
+        <Image
+          open={open}
+          src={Start}
+          as={motion.img}
+          variants={imageSlideAnimate}
+        />
 
         <Video
           open={open}
@@ -54,8 +71,10 @@ const Service = () => {
       </Left>
       <Right>
         <Wrapper>
-          <Title>Simple process to start</Title>
-          <Desc>
+          <Title as={motion.h1} variants={titleAnimation}>
+            Simple process to start
+          </Title>
+          <Desc as={motion.p} variants={subtitleAnimation}>
             We provide digital experience services to startups and small
             businesses to looking for a partner of their digital media, design &
             development, lead generation and communications requirements. We
@@ -63,10 +82,23 @@ const Service = () => {
           </Desc>
           <CardContainer>
             {services.map((service, i) => (
-              <MiniCard key={i} serv={service}/>
+              <MiniCard key={i} serv={service} />
             ))}
           </CardContainer>
-          <ServiceButton onClick={() => setOpen(true)}>
+          <ServiceButton
+            onClick={() => setOpen(true)}
+            as={motion.span}
+            variants={titleAnimation}
+            whileHover={{
+              backgroundColor: '#caf0f8',
+              outline: '#caf0f8',
+              outlineStyle: 'solid',
+              outlineColor: '#03045e',
+              outlineWidth: '2px',
+              color: '#03045e',
+            }}
+            transition={{ type: 'tween', ease: 'backIn' }}
+          >
             <MdPlayCircleOutline fontSize='25px' />
             <ButtonText>How it works</ButtonText>
           </ServiceButton>

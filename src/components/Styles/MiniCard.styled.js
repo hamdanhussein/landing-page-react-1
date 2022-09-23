@@ -13,10 +13,6 @@ export const Container = styled.div`
   -o-transition: transform 0.3s 0s ease-in;
   transition: transform 0.3s 0s ease-in;
 
-  :hover {
-    transform:scale(1.2);
-  
-  }
 `;
 
 export const Text = styled.span`

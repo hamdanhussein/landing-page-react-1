@@ -6,16 +6,6 @@ const Button = css`
   border-radius: 10px;
   border: none;
   cursor: pointer;
-
-  :hover {
-    background-color: #caf0f8;
-    outline: 2px solid #03045e;
-    color: #03045e;
-    -webkit-transition: background 0.3s 0s ease-in;
-    -moz-transition: background 0.3s 0s ease-in;
-    -o-transition: background 0.3s 0s ease-in;
-    transition: background 0.3s 0s ease-in;
-  }
 `;
 
 export const IntroButton = styled.button`
