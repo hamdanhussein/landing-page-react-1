@@ -8,14 +8,18 @@ export const Container = styled.div`
   -webkit-box-shadow: 0px 0px 17px -11px rgba(0,0,0,0.58);
   box-shadow:  0px 0px 17px -11px rgba(0,0,0,0.58);
   align-items:center;
-  -webkit-transition: transform 0.3s 0s ease-in;
-  -moz-transition: transform 0.3s 0s ease-in;
-  -o-transition: transform 0.3s 0s ease-in;
-  transition: transform 0.3s 0s ease-in;
+
+  @media only screen and (max-width: 468px) {
+    width: 50px;
+  }
 
 `;
 
 export const Text = styled.span`
 margin-top: 10px;
 text-align:center;
+
+@media only screen and (max-width: 468px) {
+  font-size: 14px;
+}
 `

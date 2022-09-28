@@ -11,6 +11,13 @@ export const Container= styled.div`
   display:flex;
   flex-direction:column;
   align-items:center;
+
+  @media only screen and (max-width: 768px) {
+    margin-right: 0;
+    margin-bottom: 20px;
+    padding: 25px;
+   
+  }
   
   }
 `
@@ -23,6 +30,10 @@ align-items:center;
 export const Price= styled.span`
 font-weight: 700;
 font-size: 50px;
+
+@media only screen and (max-width: 768px) {
+  font-size: 30px;
+}
 `
 export const Type= styled.button`
  padding: 10px;
@@ -31,6 +42,10 @@ export const Type= styled.button`
  color: crimson;
  background-color: white;
  border-radius: 20px;
+
+ @media only screen and (max-width: 768px) {
+  display:none;
+ }
 `
 
 
@@ -40,5 +55,10 @@ export const List= styled.ul`
 
 export const ListItem= styled.li`
  margin: 30px 0;
+
+ @media only screen and (max-width: 768px){
+  margin: 10px;
+  font-size: 12px;
+ }
 `
 

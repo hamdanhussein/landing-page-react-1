@@ -1,4 +1,3 @@
-import React, { useRef, useEffect } from 'react';
 
 import {
   Contact,
@@ -11,8 +10,9 @@ import {
   Phone,
   Right,
   Title,
-} from '../Styles/Intro.styled';
-import Woman from '../../images/woman-hero.png';
+} from '../Styles/Hero.styled';
+
+import BusinessWoman from '../../images/woman-portrait.png';
 import AnimatedShapes from '../Animation/AnimatedShapes';
 import { IntroButton } from '../Styles/Buttons.styled';
 import { motion } from 'framer-motion';
@@ -56,7 +56,7 @@ const Intro = () => {
       </Left>
 
       <Right>
-        {<Image src={Woman} as={motion.img} variants={imageScaleAnimation} />}
+        {<Image src={BusinessWoman} as={motion.img} variants={imageScaleAnimation} />}
       </Right>
       <AnimatedShapes />
     </Container>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { AddressItem, Text } from '../Styles/Contact.styled'
+import { AddressItem, Icon, Text } from '../Styles/Contact.styled'
 
 const ContactItem = ({item}) => {
 
@@ -8,7 +8,8 @@ const ContactItem = ({item}) => {
   return (
    
         <AddressItem>
-            {icon}
+          {icon}
+           
             <Text>{text}</Text>
         </AddressItem>
    

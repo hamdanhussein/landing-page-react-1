@@ -1,3 +1,17 @@
+export const extendedNavbarAnimation = {
+  hidden: { y: -50 , opacity: 0},
+  show: {
+    y: 1,
+    opacity: 1,
+    transition: {
+      delay: 0.2,
+      duration: 0.5,
+      type: 'tween',
+    },
+
+  }
+}
+
 export const headerAnimation = {
   hidden: { x: -100, opacity: 0 },
   show: {
@@ -25,6 +39,9 @@ export const imageScaleAnimation = {
     },
   },
 };
+
+
+
 
 //ANIMATE FEATURE SECTION
 

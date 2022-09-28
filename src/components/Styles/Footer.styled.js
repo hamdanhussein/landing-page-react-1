@@ -31,5 +31,10 @@ cursor:pointer;
 :hover {
     color: gray;
 }
+
+@media only screen and (max-width: 468px) {
+    font-size: 12px;
+  }
+
 `
 

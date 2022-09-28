@@ -19,21 +19,26 @@ import { MdPhone, MdLocationOn, MdEmail } from 'react-icons/md';
 import { contactAnimation } from '../Animation/Animation';
 import { motion } from 'framer-motion';
 
+const smallScreen  = window.screen.width <= 480 ? true : false;
+
 const AddressItems = [
   {
-    icon: <MdLocationOn fontSize='30px' color='crimson' />,
-    text: '123 IT Park Lahug, Cebu City, Cebu, Philippines',
+    icon: <MdLocationOn fontSize='20px' color='crimson' />,
+    text: '123 IT Park, Cebu, Philippines',
   },
   {
-    icon: <MdPhone fontSize='30px' color='crimson' />,
+    icon: <MdPhone fontSize='20px' color='crimson' />,
     text: '+63 32 480-8990',
   },
   {
-    icon: <MdEmail fontSize='30px' color='crimson' />,
+    icon: <MdEmail fontSize='20px' color='crimson' />,
     text: 'contact@agency.com',
   },
 ];
 const Contact = () => {
+
+ 
+
   return (
     <Container>
       <Wrapper

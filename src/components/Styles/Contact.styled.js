@@ -1,7 +1,5 @@
 import styled, { css } from 'styled-components';
 
-
-
 const FormAlignment = css`
   height: 100%;
   display: flex;
@@ -10,14 +8,14 @@ const FormAlignment = css`
 `;
 
 const Transition = css`
--webkit-transition:  0.3s 0s ease-in;
--moz-transition:  0.3s 0s ease-in;
--o-transition:  0.3s 0s ease-in;
-transition:  0.3s 0s ease-in;
-`
+  -webkit-transition: 0.3s 0s ease-in;
+  -moz-transition: 0.3s 0s ease-in;
+  -o-transition: 0.3s 0s ease-in;
+  transition: 0.3s 0s ease-in;
+`;
 export const Container = styled.div`
   height: 90%;
-  background: url("https://www.toptal.com/designers/subtlepatterns/uploads/triangle-mosaic.png");
+  background: url('https://www.toptal.com/designers/subtlepatterns/uploads/triangle-mosaic.png');
 `;
 
 export const Wrapper = styled.div`
@@ -26,10 +24,22 @@ export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media only screen and (max-width: 1280px) {
+    flex-direction: column;
+  }
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const FormContainer = styled.div`
   width: 50%;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const AddressContainer = styled.div`
@@ -37,18 +47,34 @@ export const AddressContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media only screen and (max-width: 1280px) {
+    margin-top: 50px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    margin-top: 50px;
+  }
 `;
 
 export const AddressItem = styled.div`
   display: flex;
   align-items: center;
-  margin-bottom:30px;
-`;
+  margin-bottom: 30px;
 
+  @media only screen and (max-width: 768px) {
+    margin-bottom: 20px;
+  }
+`;
 
 export const Text = styled.span`
   font-size: 20px;
   margin-left: 10px;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 14px;
+  }
 `;
 
 export const Form = styled.form`
@@ -56,11 +82,21 @@ export const Form = styled.form`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
+  }
 `;
 
 export const LeftForm = styled.div`
   ${FormAlignment}
   margin-right: 20px;
+
+  @media only screen and (max-width: 768px) {
+    height: 80%;
+    margin-right: 0;
+  }
 `;
 
 export const RightForm = styled.div`
@@ -74,10 +110,14 @@ export const Input = styled.input`
   font-size: 15px;
 
   :focus-within {
-      border-color: #ee6983;
-      outline:none;
-     ${Transition}
-     
+    border-color: #ee6983;
+    outline: none;
+    ${Transition}
+  }
+
+  @media only screen and (max-width: 768px) {
+    padding: 5px;
+    margin-top: 8px;
   }
 `;
 
@@ -88,14 +128,21 @@ export const TextArea = styled.textarea`
 
   :focus-within {
     border-color: #ee6983;
-    outline:none;
+    outline: none;
     ${Transition}
-}
+  }
+
+  @media only screen and (max-width: 768px) {
+    padding: 5px;
+    margin-top: 20px;
+  }
 `;
-
-
 
 export const Title = styled.h1`
   margin: 60px;
   margin-top: 0;
+
+  @media only screen and (max-width: 768px) {
+    margin: 20px;
+  }
 `;

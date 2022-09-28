@@ -1,58 +1,100 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-  height: 50px;
+export const Container = styled.nav`
+ 
+  height: ${props => (props.toggle ? '100vh' : '50px')};
+  background-color: ${props => props.toggle ? '#850e35' : '#fff'};
+
+  @media only screen and (min-width: 769px) {
+      background-color: #fff;
+      height: 60px;
+  }
 `;
 
 export const Wrapper = styled.div`
-  padding: 15px 20px;
+  width: 100%;
+  padding-top: 25px;
   display: flex;
-  justify-content: space-between;
-  align-items:center;
+ 
+ 
+ 
+  
 `;
 
-export const Left = styled.div`
-  width: 60%;
+export const LeftContainer = styled.div`
+  flex: 30%;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
 `;
 
 export const Logo = styled.h1`
   font-weight: 800;
+  font-size: 20px;
+  padding-left: 30px;
+  color: ${props => props.toggle ? '#fff' : '#000'};
+
+  @media only screen and (min-width: 769px) {
+    color: #000;
+  }
+
 `;
 
-export const Menu = styled.ul`
+export const RightContainer = styled.div`
+  flex: 70%;
+  display: flex;
+  justify-content: flex-end;
+`;
+
+
+export const LinkContainer = styled.ul`
   display: flex;
 `;
 
-export const MenuItem = styled.li`
-  margin-right: 30px;
-  font-size: 20px;
+export const Link = styled.li`
+  font-size: 18px;
   font-weight: 800;
-  color: gray;
-  
+  margin-right: 30px;
+  color: #000;
+
   :hover {
-    color: #03045e;
+    color: #669966;
   }
-  `
 
-export const Button = styled.button`
-    border: 2px solid white;
-    padding: 10px 15px;
-    background-color: #850e35;
-    color: white;
-    font-weight: 800;
-    border-radius: 10px;
-    cursor:pointer;
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+`;
 
-    :hover {
-      background-color: #03045e;
-      border-color:  #03045e;
-      -webkit-transition:  0.3s 0s ease-in;
-      -moz-transition:  0.3s 0s ease-in;
-      -o-transition:  0.3s 0s ease-in;
-      transition:  0.3s 0s ease-in;
+export const ExtendedContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
 
-    }
-`
+  @media only screen and (min-width: 769px) {
+    display: none;
+  }
+`;
+
+
+export const ExtendedLink = styled.li`
+  font-size: 25px;
+  font-weight: 800;
+  margin-bottom: 30px;
+  color: #fff;
+
+  :hover {
+    color: #669966;
+  }
+
+`;
+
+export const OpenNavLinks = styled.div`
+  display: none;
+
+  @media only screen and (max-width: 768px) {
+    display: grid;
+    place-content: center;
+    padding-right: 30px;
+    
+  }
+`;

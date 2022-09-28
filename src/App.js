@@ -8,15 +8,33 @@ import GlobalStyle from './components/Styles/Global.styled';
 import { SectionContainer } from './components/Styles/SectionContainer.styled';
 import { ServiceShape, FeatureShape, IntroShape, PriceShape } from './components/Styles/Shape.styled';
 import Price from './components/Section/Price/Price';
+import { useEffect, useState } from 'react';
 
 
 function App() {
+
+  const [ width, setWidth] = useState(false);
+
+  useEffect(() => {
+    
+      if(window.screen.width <=768) {
+        setWidth(true)
+      } else {
+        setWidth(false)
+      }
+   
+  }, [width])
+  
  
+  //DETECT SCREEN SIZE FOR MEDIA QUERY
+  // const smallScreen  = window.screen.width <= 768 ? true : false;
+  
   return (
     <div>
       <GlobalStyle />
+      <Navbar />
       <SectionContainer>
-        <Navbar />
+        
         <Intro />
         <IntroShape/>
       </SectionContainer>
@@ -26,7 +44,7 @@ function App() {
       </SectionContainer>
       <SectionContainer>
         <Service/>
-        <ServiceShape/>
+        {!width && <ServiceShape/>}
       </SectionContainer>
       <SectionContainer>
         <Price/>
