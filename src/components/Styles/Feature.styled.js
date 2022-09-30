@@ -4,7 +4,7 @@ export const Container = styled.div`
   display: flex;
 
   @media only screen and (min-width: 768px) {
-    padding: 100px 0;
+    /* padding: 100px 0; */
    
   }
 

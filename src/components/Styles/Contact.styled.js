@@ -14,11 +14,17 @@ const Transition = css`
   transition: 0.3s 0s ease-in;
 `;
 export const Container = styled.div`
-  height: 90%;
+  
+  width: 100%;
+  height: 100%;
+  
+  margin-top: 20px;
   background: url('https://www.toptal.com/designers/subtlepatterns/uploads/triangle-mosaic.png');
+  background-repeat: repeat;
 `;
 
 export const Wrapper = styled.div`
+ 
   height: 100%;
   padding: 20px;
   display: flex;
@@ -35,11 +41,11 @@ export const Wrapper = styled.div`
 `;
 
 export const FormContainer = styled.div`
-  width: 50%;
+  width: 100%;
 
-  @media only screen and (max-width: 768px) {
+  /* @media only screen and (max-width: 768px) {
     width: 100%;
-  }
+  } */
 `;
 
 export const AddressContainer = styled.div`
@@ -104,8 +110,8 @@ export const RightForm = styled.div`
 `;
 
 export const Input = styled.input`
-  width: 200px;
-  padding: 20px;
+  width: 280px;
+  padding: 18px;
   color: #0b132b;
   font-size: 15px;
 
@@ -122,8 +128,8 @@ export const Input = styled.input`
 `;
 
 export const TextArea = styled.textarea`
-  width: 200px;
-  height: 60%;
+  width: 280px;
+  height: 80%;
   padding: 20px;
 
   :focus-within {
@@ -142,7 +148,8 @@ export const Title = styled.h1`
   margin: 60px;
   margin-top: 0;
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1024px) {
+    text-align:center;
     margin: 20px;
   }
 `;

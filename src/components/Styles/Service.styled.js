@@ -29,20 +29,8 @@ export const Image = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-
-  /* width: 100%;
-  position:absolute;
-  top: 50px;
-  left: 0;
-  right: 0;
-  bottom: 0; */
-
   display: ${props => props.open && 'none'};
 
-  /* @media only screen and (max-width: 1280px) {
-     margin-left:0;
-  
-   } */
 `;
 
 export const Video = styled.video`
@@ -71,14 +59,14 @@ export const Right = styled.div`
   @media only screen and (min-width: 1025px) {
     width: 50%;
     padding-right: 30px;
-    padding-top:20px;
+    padding-top:0;
   }
 `;
 
 export const Wrapper = styled.div`
   /* padding: 50px 30px 50px 0;
   */
-  padding: 50px 0;
+
   display: flex;
   flex-direction: column;
 

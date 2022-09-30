@@ -26,8 +26,10 @@ export const Left = styled.div`
 
   width: 100%;
 
+
   @media only screen and (min-width: 1025px) {
     width: 50%;
+    margin-top: 70px;
   }
 
 `;
