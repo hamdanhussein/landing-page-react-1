@@ -21,6 +21,7 @@ import { headerAnimation, imageScaleAnimation } from '../Animation/Animation';
 const Intro = () => {
   return (
     <Container
+      id='home'
       as={motion.div}
       initial='hidden'
       animate='show'
@@ -49,7 +50,7 @@ const Intro = () => {
             Start a Project
           </IntroButton>
           <Contact>
-            <Phone>Call us (012) 345-6789</Phone>
+            <Phone>Call us (+632) 480-8990</Phone>
             <ContactText>For any question or concern</ContactText>
           </Contact>
         </Info>

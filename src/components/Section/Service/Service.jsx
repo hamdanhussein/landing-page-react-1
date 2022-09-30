@@ -35,7 +35,7 @@ const services = [
     icon: <Md3DRotation fontSize='30px' color='crimson' />,
   },
   {
-    service: 'Development',
+    service: 'Web Development',
     icon: <MdDeveloperMode fontSize='30px' color='crimson' />,
   },
   {

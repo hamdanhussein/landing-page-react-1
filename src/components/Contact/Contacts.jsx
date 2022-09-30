@@ -40,7 +40,7 @@ const Contact = () => {
  
 
   return (
-    <Container>
+    <Container >
       <Wrapper
         as={motion.div}
         variants={contactAnimation}

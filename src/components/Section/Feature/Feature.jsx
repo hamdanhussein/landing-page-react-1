@@ -20,7 +20,8 @@ import { motion } from 'framer-motion';
 
 const Feature = () => {
   return (
-    <Container
+    <Container 
+      
       as={motion.div}
       initial={'hidden'}
       whileInView={'show'}

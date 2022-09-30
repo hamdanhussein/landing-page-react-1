@@ -17,7 +17,7 @@ const PriceCard = ({ card }) => {
   return (
     <Container as={motion.div} variants={priceCardAnimation}>
       <PriceContainer>
-        $<Price>{price}</Price>/month
+        Php<Price>{price}</Price>/month
       </PriceContainer>
       <Type>{type}</Type>
       <List>

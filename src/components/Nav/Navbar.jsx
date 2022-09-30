@@ -18,6 +18,11 @@ import { MdDehaze, MdClose } from 'react-icons/md';
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
+  const [click, setClick] = useState(false)
+
+  const closeMenu = () => {
+    setToggle((click) => !click)
+  }
 
   return (
     <Container toggle={toggle}>
@@ -28,16 +33,15 @@ const Navbar = () => {
         transition={{ delay: 1.2 }}
       >
         <LeftContainer>
-          <Logo toggle={toggle}>Agency</Logo>
+          <Logo toggle={toggle} to="/" spy={true} smooth={true} offset={-100} duration={500}>Techly</Logo>
         </LeftContainer>
-
         <RightContainer>
           <LinkContainer>
-            <Link>Home</Link>
-            <Link>Feature</Link>
-            <Link>Services</Link>
-            <Link>Pricing</Link>
-            <Link>Contacts</Link>
+            <Link to="home" spy={true} smooth={true} offset={-100} duration={500} onClick={closeMenu}>Home</Link>
+            <Link to="feature" spy={true} smooth={true} offset={-50} duration={500} onClick={closeMenu}>Feature</Link>
+            <Link to="services" spy={true} smooth={true} offset={-50} duration={500}>Services</Link>
+            <Link to="pricing" spy={true} smooth={true} offset={-50} duration={500}>Pricing</Link>
+            <Link to="contacts" spy={true} smooth={true} offset={-50} duration={500}>Contacts</Link>
 
             <OpenNavLinks
               onClick={() => {
@@ -60,12 +64,13 @@ const Navbar = () => {
           initial='hidden'
           animate='show'
           variants={extendedNavbarAnimation}
+          close={click}
         >
-          <ExtendedLink>Home</ExtendedLink>
-          <ExtendedLink>Feature</ExtendedLink>
-          <ExtendedLink>Services</ExtendedLink>
-          <ExtendedLink>Pricing</ExtendedLink>
-          <ExtendedLink>Contacts</ExtendedLink>
+          <ExtendedLink className='active' to="home" spy={true} smooth={true} offset={-100} duration={500} onClick={closeMenu} >Home</ExtendedLink>
+          <ExtendedLink to="feature" spy={true} smooth={true} offset={10} duration={500} onClick={closeMenu}>Feature</ExtendedLink>
+          <ExtendedLink to="services" spy={true} smooth={true} offset={10} duration={500} onClick={closeMenu}>Services</ExtendedLink>
+          <ExtendedLink to="pricing" spy={true} smooth={true} offset={10} duration={500} onClick={closeMenu}>Pricing</ExtendedLink>
+          <ExtendedLink to="contacts" spy={true} smooth={true} offset={10} duration={500} onClick={closeMenu}>Contacts</ExtendedLink>
         </ExtendedContainer>
       )}
     </Container>
