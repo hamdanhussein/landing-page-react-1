@@ -32,3 +32,8 @@ While building this website, I learned:
 - Passing props to styled components
 - Styling active nav links
 - Adding shapes as background
+
+
+## Screenshot
+
+<img src="https://i.ibb.co/vQCf9xj/Screenshot-2022-10-03-at-10-38-10-React-Landing-Page.png" alt="Screenshot-2022-10-03-at-10-38-10-React-Landing-Page" border="0">
