@@ -3,6 +3,8 @@
 
 A landing page built with React using styled components from scratch
 
+## Demo 
+https://fancy-conkies-65d7b0.netlify.app/
 
 ## Tech Stack
 
